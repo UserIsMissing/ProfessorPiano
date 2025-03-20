@@ -25,58 +25,38 @@ Authors:
 
 # Table of Contents
 
-1. **Introduction and Project Overview 					2**
+1. **Introduction and Project Overview**  
+   [Introduction and Project Overview](#introduction-and-project-overview)
 
-2. **Background 									5**
+2. **Background**  
+   [Background](#background)
 
-3. **Implementation 								6**
+3. **Implementation**  
+  3.1 Piano Key Sensor  
+      3.1.1 [Fabrication of Sensor](#311-fabrication-of-sensor)  
+      3.1.2 [Physical Design](#312-physical-design)  
+      3.1.3 [Freeplay vs. Teaching](#313-freeplay-vs-teaching)  
+  3.2 Octave Sensor  
+      3.2.1 [BNO055 IMU](#321-bno055-imu)  
+  3.3 Sound System  
+        3.3.1 [I2S](#331-i2s)  
+      3.3.2 [I2S to DAC breakout board - PCM5102A](#332-i2s-to-dac-breakout-board---pcm5102a)  
+      3.3.3 [Chord Generation](#333-chord-generation)  
+      3.3.4 [Clocking Issues and PLL’s Configuration](#334-clocking-issues-and-plls-configuration)  
+  3.4 Multiple I2C Lines  
+      3.4.1 [BNO055 Address](#341-bno055-address)  
+      3.4.2 [OLED Screen Communication](#342-oled-screen-communication)  
+      3.4.3 [I2C Bus Solder Board](#343-i2c-bus-solder-board)  
+  3.5 Enclosure and Power Board  
+      3.5.1 [Enclosure Unit](#351-enclosure-unit)  
+      3.5.2 [Power Board](#352-power-board)  
 
-1. Piano Key Sensor
+4. **Evaluation**  
+  4.1 [Piano Key Sensor Testing](#41-piano-key-sensor-testing)  
+  4.2 [Octave Sensor Testing](#42-octave-sensor-testing)  
+  4.3 [Sound System Testing](#43-sound-system-testing)  
 
-1. Fabrication of Sensor
-
-2. Physical Design
-
-3. Freely vs. Teaching
-
-2. Octave Sensor
-
-4. BNO055 IMU
-
-3. Sound System
-
-5. I2S
-
-6. I2S to DAC breakout board - PCM5102A
-
-7. Chord Generation
-
-8. Clocking Issues and PLL’s Configuration
-
-3.4 	Multiple I2C lines
-
-		         3.4.1.   BNO055 Address
-
-		         3.4.2.   OLED Screen Communication
-
-		         3.4.3.   I2C Bus Solder Board
-
-### 3.5      Enclosure and Power Board
-
-3.5.1     Enclosure Unit
-
-3.5.2     Power board
-
-4. **Evaluation									****27**
-
-4. Piano Key Sensor Testing
-
-5. Octave Sensor Testing
-
-6. Sound System Testing
-
-
-5. **Discussion and Conclusion							****33**
+5. [Discussion and Conclusion](#discussion-and-conclusion)
 
 ***Git Commit ID: ******293d18e19765ba1f13535088d457ceaf4fecfb49***
 
