@@ -1,3 +1,4 @@
+
 # ProfessorPiano
 Professor Piano is an interactive piano training glove designed to teach users how to play the piano through visual and motion-based guidance as well as a freestyle mode where users can explore octaves and chords on their own.
 
@@ -25,36 +26,34 @@ Authors:
 
 # Table of Contents
 
-1. **Introduction and Project Overview**  
-   [Introduction and Project Overview](#introduction-and-project-overview)
+1. **[Introduction and Project Overview](#introduction-and-project-overview)**
 
-2. **Background**  
-   [Background](#background)
+2. **[Background](#background)**
 
 3. **Implementation**  
-  3.1 Piano Key Sensor  
-      3.1.1 [Fabrication of Sensor](#311-fabrication-of-sensor)  
-      3.1.2 [Physical Design](#312-physical-design)  
-      3.1.3 [Freeplay vs. Teaching](#313-freeplay-vs-teaching)  
-  3.2 Octave Sensor  
-      3.2.1 [BNO055 IMU](#321-bno055-imu)  
-  3.3 Sound System  
-        3.3.1 [I2S](#331-i2s)  
-      3.3.2 [I2S to DAC breakout board - PCM5102A](#332-i2s-to-dac-breakout-board---pcm5102a)  
-      3.3.3 [Chord Generation](#333-chord-generation)  
-      3.3.4 [Clocking Issues and PLL’s Configuration](#334-clocking-issues-and-plls-configuration)  
-  3.4 Multiple I2C Lines  
-      3.4.1 [BNO055 Address](#341-bno055-address)  
-      3.4.2 [OLED Screen Communication](#342-oled-screen-communication)  
-      3.4.3 [I2C Bus Solder Board](#343-i2c-bus-solder-board)  
-  3.5 Enclosure and Power Board  
-      3.5.1 [Enclosure Unit](#351-enclosure-unit)  
-      3.5.2 [Power Board](#352-power-board)  
+   3.1 Piano Key Sensor  
+   &nbsp;&nbsp;&nbsp;&nbsp;3.1.1 [Fabrication of Sensor](#part-311-fabrication-of-sensor)  
+   &nbsp;&nbsp;&nbsp;&nbsp;3.1.2 [Physical Design](#part-312-physical-design)  
+   &nbsp;&nbsp;&nbsp;&nbsp;3.1.3 [Freeplay vs. Teaching](#part-313-freeplay-vs-teaching)  
+   3.2 Octave Sensor  
+   &nbsp;&nbsp;&nbsp;&nbsp;3.2.1 [BNO055 IMU](#part-321-bno055-imu)  
+   3.3 Sound System  
+   &nbsp;&nbsp;&nbsp;&nbsp;3.3.1 [I2S](#part-331-i2s)  
+   &nbsp;&nbsp;&nbsp;&nbsp;3.3.2 [I2S to DAC breakout board - PCM5102A](#part-332-i2s-to-dac-breakout-board---pcm5102a)  
+   &nbsp;&nbsp;&nbsp;&nbsp;3.3.3 [Chord Generation](#part-333-chord-generation)  
+   &nbsp;&nbsp;&nbsp;&nbsp;3.3.4 [Clocking Issues and PLL’s Configuration](#part-334-clocking-issues-and-plls-configuration)  
+   3.4 Multiple I2C Lines  
+   &nbsp;&nbsp;&nbsp;&nbsp;3.4.1 [BNO055 Address](#part-341-bno055-address)  
+   &nbsp;&nbsp;&nbsp;&nbsp;3.4.2 [OLED Screen Communication](#part-342-oled-screen-communication)  
+   &nbsp;&nbsp;&nbsp;&nbsp;3.4.3 [I2C Bus Solder Board](#part-343-i2c-bus-solder-board)  
+   3.5 Enclosure and Power Board  
+   &nbsp;&nbsp;&nbsp;&nbsp;3.5.1 [Enclosure Unit](#part-351-enclosure-unit)  
+   &nbsp;&nbsp;&nbsp;&nbsp;3.5.2 [Power Board](#part-352-power-board)  
 
 4. **Evaluation**  
-  4.1 [Piano Key Sensor Testing](#41-piano-key-sensor-testing)  
-  4.2 [Octave Sensor Testing](#42-octave-sensor-testing)  
-  4.3 [Sound System Testing](#43-sound-system-testing)  
+   4.1 [Piano Key Sensor Testing](#part-41-piano-key-sensor-testing)  
+   4.2 [Octave Sensor Testing](#part-42-octave-sensor-testing)  
+   4.3 [Sound System Testing](#part-43-sound-system-testing)  
 
 5. [Discussion and Conclusion](#discussion-and-conclusion)
 
