@@ -16,13 +16,10 @@ Professor Piano is an interactive piano training glove designed to teach users h
 Image created using DALL·E by OpenAI
 
 
-Authors:
-
-*Cole Schreiner*
-
-*Ryan Taylor*
-
-*Ana Elizabeth Villa*
+**Authors:**  
+*Cole Schreiner*  
+*Ryan Taylor*  
+*Ana Elizabeth Villa*  
 
 </div>
 
