@@ -5,12 +5,10 @@ Professor Piano is an interactive piano training glove designed to teach users h
 
 ECE 167 Sensors and Technology
 
-# Professor: Colleen Josephson \
+<!-- # Professor: Colleen Josephson \ -->
  
 
-# Final Project:
-
-Professor Piano
+# Final Project: Professor Piano
 
 ![Enter image alt description](Images/GJH_Image_2.png)
 
