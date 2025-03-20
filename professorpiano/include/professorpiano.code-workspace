@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"name": "professorpiano",
+			"path": ".."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"piezo_file.h": "c",
+			"stdio.h": "c",
+			"board_2.h": "c",
+			"notefrequencies.h": "c"
+		}
+	}
+}

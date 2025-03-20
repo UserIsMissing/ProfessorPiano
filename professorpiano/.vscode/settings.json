@@ -1,0 +1,17 @@
+{
+    "files.associations": {
+        "stm32f4xx.h": "c",
+        "stm32f4xx_hal.h": "c",
+        "sine_wave.h": "c",
+        "wav_packet_reader.h": "c",
+        "beep_stereo_array.h": "c",
+        "*.wav": "c",
+        "i2c1.h": "c",
+        "stm32f4xx_hal_i2c.h": "c",
+        "beep_stereo_440_array.h": "c",
+        "beep_stereo_277_array.h": "c",
+        "beep_stereo_261_array.h": "c",
+        "i2c_2.h": "c",
+        "dfrobot_lcd.h": "c"
+    }
+}
