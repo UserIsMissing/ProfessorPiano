@@ -26,7 +26,7 @@ Authors:
 
 # Table of Contents
 
-1. **[Introduction and Project Overview](#introduction-and-project-overview)**
+1. **[Introduction and Project Overview](#introduction)**
 
 2. **[Background](#background)**
 
@@ -414,13 +414,13 @@ Figure: This shows the Board. The 3 inputs all share the same relative input por
 
 ## 3.5 Enclosure and Power Board
 
-### 3.5.1 Enclosure Unit
+### Part 3.5.1 Enclosure Unit
 
 The enclosure unit is relatively straightforward, designed primarily to contain and organize the inevitable tangle of wires emerging from the STM32. It consists of a simple box with dedicated mounting points for the STM32, the I2C bus protoboard, the power board, and the I2S PCM5102 board. Additionally, a power switch located on the top allows the entire system to be turned on or off with ease.
 
 ![Enter image alt description](Images/LUN_Image_25.png)
 
-### 3.5.2 Power Board
+### Part 3.5.2 Power Board
 
 The power board was inspired by the goal of making the device feel more autonomous, allowing it to run entirely on a 9V battery without requiring a separate monitor or power supply. Despite its simplicity, the board incorporates a 3.3V linear regulator, a reverse-protection diode, a status LED, and a power switch to facilitate reliable and convenient operation.
 
