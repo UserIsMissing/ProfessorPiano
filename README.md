@@ -31,22 +31,22 @@ Authors:
 2. **[Background](#background)**
 
 3. **Implementation**  
-   3.1 Piano Key Sensor  
+   **3.1 Piano Key Sensor**  
    &nbsp;&nbsp;&nbsp;&nbsp;3.1.1 [Fabrication of Sensor](#part-311-fabrication-of-sensor)  
    &nbsp;&nbsp;&nbsp;&nbsp;3.1.2 [Physical Design](#part-312-physical-design)  
-   &nbsp;&nbsp;&nbsp;&nbsp;3.1.3 [Freeplay vs. Teaching](#part-313-freeplay-vs-teaching)  
-   3.2 Octave Sensor  
+   &nbsp;&nbsp;&nbsp;&nbsp;3.1.3 [Freeplay vs. Teaching](#part-313-software-development---freeplay-vs-teaching)  
+   **3.2 Octave Sensor**  
    &nbsp;&nbsp;&nbsp;&nbsp;3.2.1 [BNO055 IMU](#part-321-bno055-imu)  
-   3.3 Sound System  
+   **3.3 Sound System**  
    &nbsp;&nbsp;&nbsp;&nbsp;3.3.1 [I2S](#part-331-i2s)  
    &nbsp;&nbsp;&nbsp;&nbsp;3.3.2 [I2S to DAC breakout board - PCM5102A](#part-332-i2s-to-dac-breakout-board---pcm5102a)  
    &nbsp;&nbsp;&nbsp;&nbsp;3.3.3 [Chord Generation](#part-333-chord-generation)  
    &nbsp;&nbsp;&nbsp;&nbsp;3.3.4 [Clocking Issues and PLL’s Configuration](#part-334-clocking-issues-and-plls-configuration)  
-   3.4 Multiple I2C Lines  
+   **3.4 Multiple I2C Lines**  
    &nbsp;&nbsp;&nbsp;&nbsp;3.4.1 [BNO055 Address](#part-341-bno055-address)  
    &nbsp;&nbsp;&nbsp;&nbsp;3.4.2 [OLED Screen Communication](#part-342-oled-screen-communication)  
    &nbsp;&nbsp;&nbsp;&nbsp;3.4.3 [I2C Bus Solder Board](#part-343-i2c-bus-solder-board)  
-   3.5 Enclosure and Power Board  
+   **3.5 Enclosure and Power Board**  
    &nbsp;&nbsp;&nbsp;&nbsp;3.5.1 [Enclosure Unit](#part-351-enclosure-unit)  
    &nbsp;&nbsp;&nbsp;&nbsp;3.5.2 [Power Board](#part-352-power-board)  
 
@@ -55,7 +55,7 @@ Authors:
    4.2 [Octave Sensor Testing](#part-42-octave-sensor-testing)  
    4.3 [Sound System Testing](#part-43-sound-system-testing)  
 
-5. [Discussion and Conclusion](#discussion-and-conclusion)
+5. **[Discussion and Conclusion](#discussion-and-conclusion)**
 
 ***Git Commit ID: ******293d18e19765ba1f13535088d457ceaf4fecfb49***
 
@@ -163,7 +163,7 @@ Image(6): Palm plate with Piano Keys
 
 The transition from a ring-based design to an exoskeleton-like glove with a rigid palm plate marked a significant improvement in the system's performance. This design not only addressed the limitations of the initial prototype but also laid the foundation for a more user-friendly, accurate, and effective piano learning tool.
 
-### Part 3.1.3: Software Development
+### Part 3.1.3: Software Development - Freeplay vs Teaching
 
 Software development encompassed the majority of the work for this project, as it enabled the system to interpret sensor data and provide meaningful feedback to the user. I focused on creating robust algorithms and efficient data structures to handle real-time signal processing, note mapping, and user interaction. Below, I’ll discuss the key components of the software, including the peak detection algorithm, calibration mode, and the use of lookup tables for notes, fingers, and songs.
 
@@ -376,9 +376,9 @@ Using these values for the MNR PLL’s. I got to a frequency of 48.1 Mhz. This h
 8Mhz / 8 * 197 /4
  => 49.25 Mhz. While what I saw on the oscilloscope was 48.1Mhz. My hypothesis for this discrepancy could be due to parasitic capacitance in the wires causing the frequency to slow down. Though I need the PCM5102 board to see a 48 Mhz signal so this works for this application.
 
-## Part 3.4 : Multiple I2C lines
+## Part 3.4: Multiple I2C lines
 
-### Part 3.4.1 : BNO055 Address
+### Part 3.4.1: BNO055 Address
 
 To implement two BNO055 sensors for the Professor Piano project, we can leverage the alternative address mode of the BNO055, which allows us to use two sensors on the same I2C bus without address conflicts. By default, the BNO055 sensors come with the same I2C address of 0x28, which would normally prevent us from addressing both sensors independently. The BNO055 file given to us has all the functions using the default 0x28 address, we just changed the functions to take in an uint8_t address, for example: 
 
@@ -414,13 +414,13 @@ Figure: This shows the Board. The 3 inputs all share the same relative input por
 
 ## 3.5 Enclosure and Power Board
 
-### Part 3.5.1 Enclosure Unit
+### Part 3.5.1: Enclosure Unit
 
 The enclosure unit is relatively straightforward, designed primarily to contain and organize the inevitable tangle of wires emerging from the STM32. It consists of a simple box with dedicated mounting points for the STM32, the I2C bus protoboard, the power board, and the I2S PCM5102 board. Additionally, a power switch located on the top allows the entire system to be turned on or off with ease.
 
 ![Enter image alt description](Images/LUN_Image_25.png)
 
-### Part 3.5.2 Power Board
+### Part 3.5.2: Power Board
 
 The power board was inspired by the goal of making the device feel more autonomous, allowing it to run entirely on a 9V battery without requiring a separate monitor or power supply. Despite its simplicity, the board incorporates a 3.3V linear regulator, a reverse-protection diode, a status LED, and a power switch to facilitate reliable and convenient operation.
 
@@ -430,7 +430,7 @@ The power board was inspired by the goal of making the device feel more autonomo
 
 # Evaluation
 
-## Part 4.1: Piano Key Sensor:
+## Part 4.1: Piano Key Sensor Testing:
 
 Since we chose to use a fabric glove, we were able to achieve many consistent results for hard taps on the piezoelectric sensor. However, it was difficult to reliably press the piezos soft using the custom threshold values I originally measured early on in the project. To combat this, I created a calibration mode which would customize hard and soft taps to each user’s ability.
 
@@ -494,7 +494,7 @@ The Professor Piano system demonstrated a high level of accuracy in distinguishi
 
 Despite the challenges posed by material constraints and the limited timeframe of just 10 days, I am extremely proud of the progress I made. The system successfully integrates hardware, software, and my team members’ functions and protocols, to create a functional and innovative piano learning tool. With further refinement, such as improved ergonomics and enhanced sensor placement, Professor Piano has the potential to become a marketable product that could make piano learning more accessible and enjoyable for people of all skill levels. This project not only met but exceeded my expectations, and I am excited about the possibilities for its future development.
 
-## Part 4.2: Octave Sensor:
+## Part 4.2: Octave Sensor Testing:
 
 The data below shows that the system is pretty accurate in detecting octave changes, with a total error (Expected vs Actual) of just 3.17%. This means that the actual results are very close to what we expected, so the octave changes are mostly happening as intended. However, the total error (Expected vs Reattempts) is much higher at 10.32%, which means the system requires less attempts to get the octave change right. This could be due to occasional misreads, leading to the need for reattempts to correctly detect the shift or not moving the IMU with enough force.
 
