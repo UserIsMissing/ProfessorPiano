@@ -63,12 +63,6 @@ Authors:
 
 # 
 
-# 
-
-# 
-
-# 
-
 # Introduction
 
 Professor Piano is an interactive piano training glove designed to teach users how to play the piano through visual and motion-based guidance as well as a freestyle mode where users can explore octaves and chords on their own. The glove features LED indicators on the fingers that flash to signal which notes to play, as well as additional LEDs to indicate when to shift up or down an octave. Below is the State machine diagram:
